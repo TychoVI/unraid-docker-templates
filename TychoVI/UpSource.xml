@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Upsource</Name>
+  <Repository>jetbrains/upsource</Repository>
+  <Registry>https://hub.docker.com/r/jetbrains/upsource</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/TychoVI/unraid-docker-templates/</Support>
+  <Project/>
+  <Overview>Whether you're looking for a code review tool, insight into your projects' history, or a place to collaborate or expand your developer expertise – Upsource has got you covered!&#xD;
+&#xD;
+This is an official Docker image of JetBrains Upsource. The image is suitable for evaluation purposes as well as for production use.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://resources.jetbrains.com/storage/products/upsource/img/meta/upsource_logo_300x300.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1557045075</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Whether you're looking for a code review tool, insight into your projects' history, or a place to collaborate or expand your developer expertise – Upsource has got you covered!&#xD;
+&#xD;
+This is an official Docker image of JetBrains Upsource. The image is suitable for evaluation purposes as well as for production use.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/upsource/logs</HostDir>
+      <ContainerDir>/opt/upsource/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/upsource/data</HostDir>
+      <ContainerDir>/data/upsource/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+	<Volume>
+      <HostDir>/mnt/user/appdata/upsource/conf</HostDir>
+      <ContainerDir>/data/upsource/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+	<Volume>
+      <HostDir>/mnt/user/appdata/upsource/backups</HostDir>
+      <ContainerDir>/data/upsource/backups</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Logs" Target="/opt/upsource/logs" Default="" Mode="rw" Description="Container Path: /opt/upsource/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/upsource/logs</Config>
+  <Config Name="Data" Target="/opt/upsource/data" Default="" Mode="rw" Description="Container Path: /opt/upsource/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/upsource/data</Config>
+  <Config Name="Conf" Target="/opt/upsource/conf" Default="" Mode="rw" Description="Container Path: /opt/upsource/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/upsource/conf</Config>
+  <Config Name="Backups" Target="/opt/upsource/backups" Default="" Mode="rw" Description="Container Path: /opt/upsource/backups" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/upsource/backups</Config>
+</Container>
