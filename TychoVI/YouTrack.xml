@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>YouTrack</Name>
+  <Repository>jetbrains/youtrack</Repository>
+  <Registry>https://hub.docker.com/r/jetbrains/youtrack/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/TychoVI/unraid-docker-templates/</Support>
+  <Project/>
+  <Overview>A project management tool that can be adapted to your processes to help you deliver great products. Track tasks and bugs, plan sprints and releases, create workflows, and customize YouTrack for your business processes. Never force your process to fit the limits of a tool again. Unlike other issue trackers, YouTrack can be customized to your needs!&#xD;
+&#xD;
+This is an official Docker image of JetBrains YouTrack. The image is suitable for evaluation purposes as well as for production use.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://seeklogo.com/images/Y/youtrack-logo-241D943602-seeklogo.com.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1557045075</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A project management tool that can be adapted to your processes to help you deliver great products. Track tasks and bugs, plan sprints and releases, create workflows, and customize YouTrack for your business processes. Never force your process to fit the limits of a tool again. Unlike other issue trackers, YouTrack can be customized to your needs!&#xD;
+&#xD;
+This is an official Docker image of JetBrains YouTrack. The image is suitable for evaluation purposes as well as for production use.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/youtrack/logs</HostDir>
+      <ContainerDir>/opt/youtrack/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/youtrack/data</HostDir>
+      <ContainerDir>/data/youtrack/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+	<Volume>
+      <HostDir>/mnt/user/appdata/youtrack/conf</HostDir>
+      <ContainerDir>/data/youtrack/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+	<Volume>
+      <HostDir>/mnt/user/appdata/youtrack/backups</HostDir>
+      <ContainerDir>/data/youtrack/backups</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+</Container>
