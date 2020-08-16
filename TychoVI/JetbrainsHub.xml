@@ -61,7 +61,7 @@ This is an official Docker image of JetBrains Hub. The image is suitable for eva
   <Labels/>
   <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="Logs" Target="/opt/hub/logs" Default="" Mode="rw" Description="Container Path: /opt/hub/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hub/logs</Config>
-  <Config Name="Data" Target="/data/hub/datadir" Default="" Mode="rw" Description="Container Path: /data/hub/datadir" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hub/datadir</Config>
+  <Config Name="Data" Target="/opt/hub/data" Default="" Mode="rw" Description="Container Path: /opt/hub/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hub/data</Config>
   <Config Name="Conf" Target="/opt/hub/conf" Default="" Mode="rw" Description="Container Path: /opt/hub/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hub/conf</Config>
-  <Config Name="Backups" Target="/data/hub/backups" Default="" Mode="rw" Description="Container Path: /data/hub/backups" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hub/backups</Config>
+  <Config Name="Backups" Target="/opt/hub/backups" Default="" Mode="rw" Description="Container Path: /opt/hub/backups" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hub/backups</Config>
 </Container>

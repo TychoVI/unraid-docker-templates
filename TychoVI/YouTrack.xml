@@ -61,7 +61,7 @@ This is an official Docker image of JetBrains YouTrack. The image is suitable fo
   <Labels/>
   <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="Logs" Target="/opt/youtrack/logs" Default="" Mode="rw" Description="Container Path: /opt/youtrack/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/youtrack/logs</Config>
-  <Config Name="Data" Target="/data/youtrack/datadir" Default="" Mode="rw" Description="Container Path: /data/youtrack/datadir" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/youtrack/datadir</Config>
+  <Config Name="Data" Target="/opt/youtrack/datadir" Default="" Mode="rw" Description="Container Path: /opt/youtrack/datadir" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/youtrack/data</Config>
   <Config Name="Conf" Target="/opt/youtrack/conf" Default="" Mode="rw" Description="Container Path: /opt/youtrack/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/youtrack/conf</Config>
-  <Config Name="Backups" Target="/data/youtrack/backups" Default="" Mode="rw" Description="Container Path: /data/youtrack/backups" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/youtrack/backups</Config>
+  <Config Name="Backups" Target="/opt/youtrack/backups" Default="" Mode="rw" Description="Container Path: /opt/youtrack/backups" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/youtrack/backups</Config>
 </Container>
