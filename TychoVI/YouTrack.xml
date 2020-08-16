@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>YouTrack</Name>
   <Repository>jetbrains/youtrack</Repository>
-  <Registry>https://hub.docker.com/r/jetbrains/youtrack/</Registry>
+  <Registry>https://hub.docker.com/r/jetbrains/youtrack</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
