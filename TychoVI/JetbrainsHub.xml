@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Jetbrains Hub</Name>
+  <Repository>jetbrains/hub</Repository>
+  <Registry>https://hub.docker.com/r/jetbrains/hub</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/TychoVI/unraid-docker-templates/</Support>
+  <Project/>
+  <Overview>Manage users across Upsource, YouTrack and TeamCity installations, use a centralized dashboard for a quick overview of the relevant commits, issues, or tests. Conduct administrative support for groups and permissions and manage licenses between Upsource and YouTrack.&#xD;
+&#xD;
+This is an official Docker image of JetBrains Hub. The image is suitable for evaluation purposes as well as for production use.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://resources.jetbrains.com/storage/products/hub/img/meta/hub_logo_300x300.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1557045075</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Manage users across Upsource, YouTrack and TeamCity installations, use a centralized dashboard for a quick overview of the relevant commits, issues, or tests. Conduct administrative support for groups and permissions and manage licenses between Upsource and YouTrack.&#xD;
+&#xD;
+This is an official Docker image of JetBrains Hub. The image is suitable for evaluation purposes as well as for production use.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/hub/logs</HostDir>
+      <ContainerDir>/opt/hub/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/hub/data</HostDir>
+      <ContainerDir>/data/hub/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+	<Volume>
+      <HostDir>/mnt/user/appdata/hub/conf</HostDir>
+      <ContainerDir>/data/hub/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+	<Volume>
+      <HostDir>/mnt/user/appdata/hub/backups</HostDir>
+      <ContainerDir>/data/hub/backups</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Logs" Target="/opt/hub/logs" Default="" Mode="rw" Description="Container Path: /opt/hub/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hub/logs</Config>
+  <Config Name="Data" Target="/data/hub/datadir" Default="" Mode="rw" Description="Container Path: /data/hub/datadir" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hub/datadir</Config>
+  <Config Name="Conf" Target="/opt/hub/conf" Default="" Mode="rw" Description="Container Path: /opt/hub/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hub/conf</Config>
+  <Config Name="Backups" Target="/data/hub/backups" Default="" Mode="rw" Description="Container Path: /data/hub/backups" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/hub/backups</Config>
+</Container>
